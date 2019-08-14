@@ -1,0 +1,321 @@
+  CALL    scripts/checksyscalls.sh
+  DESCEND  objtool
+  CC [M]  arch/x86/crypto/glue_helper.o
+  AS [M]  arch/x86/crypto/aes-x86_64-asm_64.o
+  CC [M]  arch/x86/crypto/aes_glue.o
+  LD [M]  arch/x86/crypto/aes-x86_64.o
+  AS [M]  arch/x86/crypto/aesni-intel_asm.o
+  CC [M]  arch/x86/crypto/aesni-intel_glue.o
+  LD [M]  arch/x86/crypto/aesni-intel.o
+  CC [M]  arch/x86/crypto/ghash-clmulni-intel_glue.o
+  LD [M]  arch/x86/crypto/ghash-clmulni-intel.o
+  CC [M]  arch/x86/crypto/crc32-pclmul_glue.o
+  LD [M]  arch/x86/crypto/crc32-pclmul.o
+  CC [M]  arch/x86/crypto/crct10dif-pclmul_glue.o
+  LD [M]  arch/x86/crypto/crct10dif-pclmul.o
+  CC [M]  arch/x86/events/intel/rapl.o
+  LD [M]  arch/x86/events/intel/intel-rapl-perf.o
+  GZIP    kernel/config_data.gz
+  UPD     kernel/config_data.h
+  CC [M]  kernel/configs.o
+  CC [M]  fs/autofs/init.o
+  CC [M]  fs/autofs/inode.o
+  CC [M]  fs/autofs/root.o
+  CC [M]  fs/autofs/symlink.o
+  CC [M]  fs/autofs/waitq.o
+  CC [M]  fs/autofs/expire.o
+  CC [M]  fs/autofs/dev-ioctl.o
+  LD [M]  fs/autofs/autofs4.o
+  CC [M]  fs/isofs/namei.o
+  CC [M]  fs/isofs/inode.o
+  CC [M]  fs/isofs/dir.o
+  CC [M]  fs/isofs/util.o
+  CC [M]  fs/isofs/rock.o
+  CC [M]  fs/isofs/export.o
+  CC [M]  fs/isofs/joliet.o
+  CC [M]  fs/isofs/compress.o
+  LD [M]  fs/isofs/isofs.o
+  CC [M]  fs/nls/nls_utf8.o
+  CC [M]  crypto/cryptd.o
+  CC [M]  crypto/simd.o
+  LD [M]  crypto/crypto_simd.o
+  CC [M]  drivers/acpi/acpi_video.o
+  CC [M]  drivers/acpi/video_detect.o
+  LD [M]  drivers/acpi/video.o
+  CC [M]  drivers/ata/ahci.o
+  CC [M]  drivers/ata/libahci.o
+  CC [M]  drivers/ata/acard-ahci.o
+  CC [M]  drivers/ata/ahci_platform.o
+  CC [M]  drivers/ata/libahci_platform.o
+  CC [M]  drivers/ata/pata_acpi.o
+  CC [M]  drivers/gpu/drm/drm_crtc_helper.o
+  CC [M]  drivers/gpu/drm/drm_dp_helper.o
+  CC [M]  drivers/gpu/drm/drm_dsc.o
+  CC [M]  drivers/gpu/drm/drm_probe_helper.o
+  CC [M]  drivers/gpu/drm/drm_plane_helper.o
+  CC [M]  drivers/gpu/drm/drm_dp_mst_topology.o
+  CC [M]  drivers/gpu/drm/drm_atomic_helper.o
+  CC [M]  drivers/gpu/drm/drm_kms_helper_common.o
+  CC [M]  drivers/gpu/drm/drm_dp_dual_mode_helper.o
+  CC [M]  drivers/gpu/drm/drm_simple_kms_helper.o
+  CC [M]  drivers/gpu/drm/drm_modeset_helper.o
+  CC [M]  drivers/gpu/drm/drm_scdc_helper.o
+  CC [M]  drivers/gpu/drm/drm_gem_framebuffer_helper.o
+  CC [M]  drivers/gpu/drm/drm_atomic_state_helper.o
+  CC [M]  drivers/gpu/drm/drm_damage_helper.o
+  CC [M]  drivers/gpu/drm/bridge/panel.o
+  CC [M]  drivers/gpu/drm/drm_fb_helper.o
+  CC [M]  drivers/gpu/drm/drm_dp_aux_dev.o
+  CC [M]  drivers/gpu/drm/drm_dp_cec.o
+  LD [M]  drivers/gpu/drm/drm_kms_helper.o
+  CC [M]  drivers/gpu/drm/drm_auth.o
+  CC [M]  drivers/gpu/drm/drm_bufs.o
+  CC [M]  drivers/gpu/drm/drm_cache.o
+  CC [M]  drivers/gpu/drm/drm_context.o
+  CC [M]  drivers/gpu/drm/drm_dma.o
+  CC [M]  drivers/gpu/drm/drm_file.o
+  CC [M]  drivers/gpu/drm/drm_gem.o
+  CC [M]  drivers/gpu/drm/drm_ioctl.o
+  CC [M]  drivers/gpu/drm/drm_irq.o
+  CC [M]  drivers/gpu/drm/drm_lock.o
+  CC [M]  drivers/gpu/drm/drm_memory.o
+  CC [M]  drivers/gpu/drm/drm_drv.o
+  CC [M]  drivers/gpu/drm/drm_scatter.o
+  CC [M]  drivers/gpu/drm/drm_pci.o
+  CC [M]  drivers/gpu/drm/drm_sysfs.o
+  CC [M]  drivers/gpu/drm/drm_hashtab.o
+  CC [M]  drivers/gpu/drm/drm_mm.o
+  CC [M]  drivers/gpu/drm/drm_crtc.o
+  CC [M]  drivers/gpu/drm/drm_fourcc.o
+  CC [M]  drivers/gpu/drm/drm_modes.o
+  CC [M]  drivers/gpu/drm/drm_edid.o
+  CC [M]  drivers/gpu/drm/drm_encoder_slave.o
+  CC [M]  drivers/gpu/drm/drm_trace_points.o
+  CC [M]  drivers/gpu/drm/drm_prime.o
+  CC [M]  drivers/gpu/drm/drm_rect.o
+  CC [M]  drivers/gpu/drm/drm_vma_manager.o
+  CC [M]  drivers/gpu/drm/drm_flip_work.o
+  CC [M]  drivers/gpu/drm/drm_modeset_lock.o
+  CC [M]  drivers/gpu/drm/drm_atomic.o
+  CC [M]  drivers/gpu/drm/drm_bridge.o
+  CC [M]  drivers/gpu/drm/drm_framebuffer.o
+  CC [M]  drivers/gpu/drm/drm_connector.o
+  CC [M]  drivers/gpu/drm/drm_blend.o
+  CC [M]  drivers/gpu/drm/drm_encoder.o
+  CC [M]  drivers/gpu/drm/drm_mode_object.o
+  CC [M]  drivers/gpu/drm/drm_property.o
+  CC [M]  drivers/gpu/drm/drm_plane.o
+  CC [M]  drivers/gpu/drm/drm_color_mgmt.o
+  CC [M]  drivers/gpu/drm/drm_print.o
+  CC [M]  drivers/gpu/drm/drm_dumb_buffers.o
+  CC [M]  drivers/gpu/drm/drm_mode_config.o
+  CC [M]  drivers/gpu/drm/drm_vblank.o
+  CC [M]  drivers/gpu/drm/drm_syncobj.o
+  CC [M]  drivers/gpu/drm/drm_lease.o
+  CC [M]  drivers/gpu/drm/drm_writeback.o
+  CC [M]  drivers/gpu/drm/drm_client.o
+  CC [M]  drivers/gpu/drm/drm_atomic_uapi.o
+  CC [M]  drivers/gpu/drm/drm_ioc32.o
+  CC [M]  drivers/gpu/drm/ati_pcigart.o
+  CC [M]  drivers/gpu/drm/drm_panel.o
+  CC [M]  drivers/gpu/drm/drm_agpsupport.o
+  CC [M]  drivers/gpu/drm/drm_debugfs.o
+  CC [M]  drivers/gpu/drm/drm_debugfs_crc.o
+  CC [M]  drivers/gpu/drm/drm_edid_load.o
+  LD [M]  drivers/gpu/drm/drm.o
+  CC [M]  drivers/gpu/drm/ttm/ttm_memory.o
+  CC [M]  drivers/gpu/drm/ttm/ttm_tt.o
+  CC [M]  drivers/gpu/drm/ttm/ttm_bo.o
+  CC [M]  drivers/gpu/drm/ttm/ttm_bo_util.o
+  CC [M]  drivers/gpu/drm/ttm/ttm_bo_vm.o
+  CC [M]  drivers/gpu/drm/ttm/ttm_module.o
+  CC [M]  drivers/gpu/drm/ttm/ttm_execbuf_util.o
+  CC [M]  drivers/gpu/drm/ttm/ttm_page_alloc.o
+  CC [M]  drivers/gpu/drm/ttm/ttm_bo_manager.o
+  CC [M]  drivers/gpu/drm/ttm/ttm_page_alloc_dma.o
+  CC [M]  drivers/gpu/drm/ttm/ttm_agp_backend.o
+  LD [M]  drivers/gpu/drm/ttm/ttm.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_execbuf.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_gmr.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_kms.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_drv.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_fb.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_ioctl.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_resource.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_ttm_buffer.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_fifo.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_irq.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_ldu.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_ttm_glue.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_overlay.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_marker.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_gmrid_manager.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_fence.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_bo.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_scrn.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_context.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_surface.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_prime.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_mob.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_shader.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_cmdbuf_res.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_cmdbuf.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_stdu.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_cotable.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_so.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_binding.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_msg.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_simple_resource.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_va.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_blit.o
+  CC [M]  drivers/gpu/drm/vmwgfx/vmwgfx_validation.o
+  CC [M]  drivers/gpu/drm/vmwgfx/ttm_object.o
+  CC [M]  drivers/gpu/drm/vmwgfx/ttm_lock.o
+  LD [M]  drivers/gpu/drm/vmwgfx/vmwgfx.o
+  CC [M]  drivers/hid/hid-core.o
+  CC [M]  drivers/hid/hid-input.o
+  CC [M]  drivers/hid/hid-quirks.o
+  CC [M]  drivers/hid/hid-debug.o
+  CC [M]  drivers/hid/hidraw.o
+  LD [M]  drivers/hid/hid.o
+  CC [M]  drivers/hid/hid-generic.o
+  CC [M]  drivers/hid/usbhid/hid-core.o
+  CC [M]  drivers/hid/usbhid/hiddev.o
+  CC [M]  drivers/hid/usbhid/hid-pidff.o
+  LD [M]  drivers/hid/usbhid/usbhid.o
+  CC [M]  drivers/i2c/algos/i2c-algo-bit.o
+  CC [M]  drivers/i2c/busses/i2c-piix4.o
+  CC [M]  drivers/input/input-leds.o
+  CC [M]  drivers/input/joydev.o
+  CC [M]  drivers/input/mouse/psmouse-base.o
+  CC [M]  drivers/input/mouse/synaptics.o
+  CC [M]  drivers/input/mouse/focaltech.o
+  CC [M]  drivers/input/mouse/alps.o
+  CC [M]  drivers/input/mouse/byd.o
+  CC [M]  drivers/input/mouse/elantech.o
+  CC [M]  drivers/input/mouse/logips2pp.o
+  CC [M]  drivers/input/mouse/lifebook.o
+  CC [M]  drivers/input/mouse/sentelic.o
+  CC [M]  drivers/input/mouse/trackpoint.o
+  CC [M]  drivers/input/mouse/touchkit_ps2.o
+  CC [M]  drivers/input/mouse/cypress_ps2.o
+  CC [M]  drivers/input/mouse/psmouse-smbus.o
+  LD [M]  drivers/input/mouse/psmouse.o
+  CC [M]  drivers/input/serio/serio_raw.o
+  CC [M]  drivers/net/ethernet/intel/e1000/e1000_main.o
+  CC [M]  drivers/net/ethernet/intel/e1000/e1000_hw.o
+  CC [M]  drivers/net/ethernet/intel/e1000/e1000_ethtool.o
+  CC [M]  drivers/net/ethernet/intel/e1000/e1000_param.o
+  LD [M]  drivers/net/ethernet/intel/e1000/e1000.o
+  CC [M]  drivers/staging/vboxvideo/hgsmi_base.o
+  CC [M]  drivers/staging/vboxvideo/modesetting.o
+  CC [M]  drivers/staging/vboxvideo/vbva_base.o
+  CC [M]  drivers/staging/vboxvideo/vbox_drv.o
+  CC [M]  drivers/staging/vboxvideo/vbox_fb.o
+  CC [M]  drivers/staging/vboxvideo/vbox_hgsmi.o
+  CC [M]  drivers/staging/vboxvideo/vbox_irq.o
+  CC [M]  drivers/staging/vboxvideo/vbox_main.o
+  CC [M]  drivers/staging/vboxvideo/vbox_mode.o
+  CC [M]  drivers/staging/vboxvideo/vbox_prime.o
+  CC [M]  drivers/staging/vboxvideo/vbox_ttm.o
+  LD [M]  drivers/staging/vboxvideo/vboxvideo.o
+  CC [M]  drivers/video/fbdev/core/sysfillrect.o
+  CC [M]  drivers/video/fbdev/core/syscopyarea.o
+  CC [M]  drivers/video/fbdev/core/sysimgblt.o
+  CC [M]  drivers/video/fbdev/core/fb_sys_fops.o
+  CC [M]  sound/sound_core.o
+  LD [M]  sound/soundcore.o
+  CC [M]  net/ipv4/netfilter/ip_tables.o
+  CC [M]  net/netfilter/x_tables.o
+  CC [M]  net/netfilter/xt_tcpudp.o
+  CC [M]  net/sched/sch_fq_codel.o
+  Building modules, stage 2.
+  MODPOST 44 modules
+  CC      arch/x86/crypto/aes-x86_64.mod.o
+  LD [M]  arch/x86/crypto/aes-x86_64.ko
+  CC      arch/x86/crypto/aesni-intel.mod.o
+  LD [M]  arch/x86/crypto/aesni-intel.ko
+  CC      arch/x86/crypto/crc32-pclmul.mod.o
+  LD [M]  arch/x86/crypto/crc32-pclmul.ko
+  CC      arch/x86/crypto/crct10dif-pclmul.mod.o
+  LD [M]  arch/x86/crypto/crct10dif-pclmul.ko
+  CC      arch/x86/crypto/ghash-clmulni-intel.mod.o
+  LD [M]  arch/x86/crypto/ghash-clmulni-intel.ko
+  CC      arch/x86/crypto/glue_helper.mod.o
+  LD [M]  arch/x86/crypto/glue_helper.ko
+  CC      arch/x86/events/intel/intel-rapl-perf.mod.o
+  LD [M]  arch/x86/events/intel/intel-rapl-perf.ko
+  CC      crypto/cryptd.mod.o
+  LD [M]  crypto/cryptd.ko
+  CC      crypto/crypto_simd.mod.o
+  LD [M]  crypto/crypto_simd.ko
+  CC      drivers/acpi/video.mod.o
+  LD [M]  drivers/acpi/video.ko
+  CC      drivers/ata/acard-ahci.mod.o
+  LD [M]  drivers/ata/acard-ahci.ko
+  CC      drivers/ata/ahci.mod.o
+  LD [M]  drivers/ata/ahci.ko
+  CC      drivers/ata/ahci_platform.mod.o
+  LD [M]  drivers/ata/ahci_platform.ko
+  CC      drivers/ata/libahci.mod.o
+  LD [M]  drivers/ata/libahci.ko
+  CC      drivers/ata/libahci_platform.mod.o
+  LD [M]  drivers/ata/libahci_platform.ko
+  CC      drivers/ata/pata_acpi.mod.o
+  LD [M]  drivers/ata/pata_acpi.ko
+  CC      drivers/gpu/drm/drm.mod.o
+  LD [M]  drivers/gpu/drm/drm.ko
+  CC      drivers/gpu/drm/drm_kms_helper.mod.o
+  LD [M]  drivers/gpu/drm/drm_kms_helper.ko
+  CC      drivers/gpu/drm/ttm/ttm.mod.o
+  LD [M]  drivers/gpu/drm/ttm/ttm.ko
+  CC      drivers/gpu/drm/vmwgfx/vmwgfx.mod.o
+  LD [M]  drivers/gpu/drm/vmwgfx/vmwgfx.ko
+  CC      drivers/hid/hid-generic.mod.o
+  LD [M]  drivers/hid/hid-generic.ko
+  CC      drivers/hid/hid.mod.o
+  LD [M]  drivers/hid/hid.ko
+  CC      drivers/hid/usbhid/usbhid.mod.o
+  LD [M]  drivers/hid/usbhid/usbhid.ko
+  CC      drivers/i2c/algos/i2c-algo-bit.mod.o
+  LD [M]  drivers/i2c/algos/i2c-algo-bit.ko
+  CC      drivers/i2c/busses/i2c-piix4.mod.o
+  LD [M]  drivers/i2c/busses/i2c-piix4.ko
+  CC      drivers/input/input-leds.mod.o
+  LD [M]  drivers/input/input-leds.ko
+  CC      drivers/input/joydev.mod.o
+  LD [M]  drivers/input/joydev.ko
+  CC      drivers/input/mouse/psmouse.mod.o
+  LD [M]  drivers/input/mouse/psmouse.ko
+  CC      drivers/input/serio/serio_raw.mod.o
+  LD [M]  drivers/input/serio/serio_raw.ko
+  CC      drivers/net/ethernet/intel/e1000/e1000.mod.o
+  LD [M]  drivers/net/ethernet/intel/e1000/e1000.ko
+  CC      drivers/staging/vboxvideo/vboxvideo.mod.o
+  LD [M]  drivers/staging/vboxvideo/vboxvideo.ko
+  CC      drivers/video/fbdev/core/fb_sys_fops.mod.o
+  LD [M]  drivers/video/fbdev/core/fb_sys_fops.ko
+  CC      drivers/video/fbdev/core/syscopyarea.mod.o
+  LD [M]  drivers/video/fbdev/core/syscopyarea.ko
+  CC      drivers/video/fbdev/core/sysfillrect.mod.o
+  LD [M]  drivers/video/fbdev/core/sysfillrect.ko
+  CC      drivers/video/fbdev/core/sysimgblt.mod.o
+  LD [M]  drivers/video/fbdev/core/sysimgblt.ko
+  CC      fs/autofs/autofs4.mod.o
+  LD [M]  fs/autofs/autofs4.ko
+  CC      fs/isofs/isofs.mod.o
+  LD [M]  fs/isofs/isofs.ko
+  CC      fs/nls/nls_utf8.mod.o
+  LD [M]  fs/nls/nls_utf8.ko
+  CC      kernel/configs.mod.o
+  LD [M]  kernel/configs.ko
+  CC      net/ipv4/netfilter/ip_tables.mod.o
+  LD [M]  net/ipv4/netfilter/ip_tables.ko
+  CC      net/netfilter/x_tables.mod.o
+  LD [M]  net/netfilter/x_tables.ko
+  CC      net/netfilter/xt_tcpudp.mod.o
+  LD [M]  net/netfilter/xt_tcpudp.ko
+  CC      net/sched/sch_fq_codel.mod.o
+  LD [M]  net/sched/sch_fq_codel.ko
+  CC      sound/soundcore.mod.o
+  LD [M]  sound/soundcore.ko
